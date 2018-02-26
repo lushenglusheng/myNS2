@@ -1,0 +1,13 @@
+CREATE TABLE user (
+	uid int(11) NOT NULL AUTO_INCREMENT,
+	username varchar(255) NOT NULL,
+	password varchar(255) NOT NULL,
+	PRIMARY KEY (uid)
+) ENGINE=InnoDB CHARSET=utf8;
+
+CREATE TABLE data (  
+	did int(11) NOT NULL AUTO_INCREMENT,  
+	uid int(11) NOT NULL,
+	data varchar(255) NOT NULL,
+	FOREIGN KEY (uid) references user (uid)
+) ENGINE=InnoDB CHARSET=utf8;
